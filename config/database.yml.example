@@ -2,9 +2,9 @@ default: &default
   adapter: mysql2
   encoding: utf8mb4
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-  host: localhost
-  username: root
-  password: deepblue12!
+  host: host
+  username: username
+  password: password
   socket: /var/run/mysqld/mysqld.sock
 
 development:
@@ -41,5 +41,5 @@ test:
 production:
   <<: *default
   database: smartnet_production
-  username: senze
-  password: senze12!
+  username: username
+  password: password
