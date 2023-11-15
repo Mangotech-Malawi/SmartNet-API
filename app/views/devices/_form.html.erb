@@ -1,0 +1,52 @@
+<%= form_with(model: device) do |form| %>
+  <% if device.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(device.errors.count, "error") %> prohibited this device from being saved:</h2>
+
+      <ul>
+        <% device.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :person_id, style: "display: block" %>
+    <%= form.text_field :person_id %>
+  </div>
+
+  <div>
+    <%= form.label :serial_number, style: "display: block" %>
+    <%= form.text_field :serial_number %>
+  </div>
+
+  <div>
+    <%= form.label :ip_address, style: "display: block" %>
+    <%= form.text_field :ip_address %>
+  </div>
+
+  <div>
+    <%= form.label :name, style: "display: block" %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div>
+    <%= form.label :device_type, style: "display: block" %>
+    <%= form.text_field :device_type %>
+  </div>
+
+  <div>
+    <%= form.label :mac_address, style: "display: block" %>
+    <%= form.text_field :mac_address %>
+  </div>
+
+  <div>
+    <%= form.label :voided, style: "display: block" %>
+    <%= form.check_box :voided %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

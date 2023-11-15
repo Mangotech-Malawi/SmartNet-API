@@ -1,0 +1,2 @@
+class Intrusion < ApplicationRecord
+end

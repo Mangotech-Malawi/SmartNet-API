@@ -1,0 +1,19 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  person_id: 
+  serial_number: MyString
+  ip_address: MyString
+  name: MyString
+  device_type: MyString
+  mac_address: MyString
+  voided: false
+
+two:
+  person_id: 
+  serial_number: MyString
+  ip_address: MyString
+  name: MyString
+  device_type: MyString
+  mac_address: MyString
+  voided: false
