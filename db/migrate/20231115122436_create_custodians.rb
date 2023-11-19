@@ -7,8 +7,6 @@ class CreateCustodians < ActiveRecord::Migration[7.1]
       t.timestamps
     end
 
-    remove_foreign_key :devices, column: :person_id
-
     remove_column :devices, :person_id
 
     add_column :devices, :custodian_id, :bigint
