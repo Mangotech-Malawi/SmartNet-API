@@ -13,6 +13,15 @@ Rails.application.routes.draw do
       namespace:v1 do 
         resources :users, param: :username
         post '/auth/login', to: 'authentication#login'
+        
+        #User Management Routes
+        get '/users', to: 'users#index'
+        post '/new_user', to: 'users#create'
+        post '/edit_user', to: 'users#update'
+        post '/delete_user', to: 'users#del_user'
+        post '/verify_password', to: 'users#verify_password'
+        post '/update_profile', to: 'users#update_profile'
+        
       end
     end
   end
