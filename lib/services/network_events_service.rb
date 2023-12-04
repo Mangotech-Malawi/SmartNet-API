@@ -15,7 +15,7 @@ module NetworkEventsService
         created_at: network_event.created_at,
         updated_at: network_event.updated_at,
         source_ip: network_event.source_ip,
-        source_ip: network_event.dest_ip,
+        dest_ip: network_event.dest_ip,
         protocol: network_event.protocol,
         port: network_event.port,
         device_name: network_event.device_name,
