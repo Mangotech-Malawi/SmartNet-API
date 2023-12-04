@@ -74,3 +74,8 @@ gem 'jwt'
 gem 'bcrypt', '~> 3.1.7'
 
 gem 'rack-cors'
+
+gem 'sidekiq', '7.2.0'
+
+gem 'activerecord'
+gem 'net-ping'
