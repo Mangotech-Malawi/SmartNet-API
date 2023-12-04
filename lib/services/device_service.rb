@@ -16,7 +16,6 @@ module DeviceService
     
         if device
           device.update(
-            custodian_id: params[:custodian_id],
             serial_number: params[:serial_number],
             ip_address: params[:ip_address],
             name: params[:name],
