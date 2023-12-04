@@ -4,6 +4,6 @@ class Device < ApplicationRecord
     validates  :name, presence: true
     validates  :device_type, presence:true
     validates  :mac_address, presence: true
-    validates  :person_id, presence: true
-    belongs_to :custodian
+    validates  :custodian_id, presence: true
+    
 end

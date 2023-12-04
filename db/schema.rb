@@ -10,11 +10,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2023_11_15_134734) do
+ActiveRecord::Schema[7.1].define(version: 2023_12_04_111359) do
   create_table "custodians", charset: "utf8mb4", force: :cascade do |t|
     t.bigint "custodian_type_id"
     t.string "custodian_type"
-    t.boolean "voided"
+    t.boolean "voided", default: false, null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -24,7 +24,7 @@ ActiveRecord::Schema[7.1].define(version: 2023_11_15_134734) do
     t.text "description"
     t.string "phone_number"
     t.string "email"
-    t.boolean "voided"
+    t.boolean "voided", default: false, null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -35,7 +35,7 @@ ActiveRecord::Schema[7.1].define(version: 2023_11_15_134734) do
     t.string "name"
     t.string "device_type"
     t.string "mac_address"
-    t.boolean "voided"
+    t.boolean "voided", default: false, null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.bigint "custodian_id"
@@ -46,7 +46,7 @@ ActiveRecord::Schema[7.1].define(version: 2023_11_15_134734) do
     t.string "name"
     t.string "description"
     t.string "severity"
-    t.boolean "voided"
+    t.boolean "voided", default: false, null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -54,7 +54,7 @@ ActiveRecord::Schema[7.1].define(version: 2023_11_15_134734) do
   create_table "intrusions", charset: "utf8mb4", force: :cascade do |t|
     t.bigint "network_event_id"
     t.text "description"
-    t.boolean "voided"
+    t.boolean "voided", default: false, null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["network_event_id"], name: "fk_rails_99ad997a03"
@@ -66,7 +66,7 @@ ActiveRecord::Schema[7.1].define(version: 2023_11_15_134734) do
     t.string "dest_ip"
     t.string "protocol"
     t.integer "port"
-    t.boolean "voided"
+    t.boolean "voided", default: false, null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.bigint "event_id"
@@ -92,6 +92,7 @@ ActiveRecord::Schema[7.1].define(version: 2023_11_15_134734) do
     t.text "description"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.boolean "voided", default: false, null: false
     t.index ["intrusion_id"], name: "fk_rails_7ea4faf404"
   end
 
