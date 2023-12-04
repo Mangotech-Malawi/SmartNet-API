@@ -5,6 +5,6 @@ class NetworkEvent < ApplicationRecord
     validates  :protocol, presence: true
     validates  :port, presence:true
     belongs_to :device
-    has_many   :event
+    belongs_to   :event
 end
 
