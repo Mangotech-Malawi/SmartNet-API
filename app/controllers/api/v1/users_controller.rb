@@ -24,9 +24,9 @@ class Api::V1::UsersController < ApplicationController
         
 
         if user
-        render json: user, status: :created
+          render json: user, status: :created
         else
-        render json: { errors: user.errors.full_messages },
+          render json: { errors: user.errors.full_messages },
                 status: :unprocessable_entity
         end
         

@@ -21,6 +21,16 @@ Rails.application.routes.draw do
         post '/delete_user', to: 'users#del_user'
         post '/verify_password', to: 'users#verify_password'
         post '/update_profile', to: 'users#update_profile'
+
+        post '/custodian/new', to: 'custodian#create'
+        get '/custodians', to: 'custodian#index'
+        post '/custodian/edit', to: 'custodian#update'
+
+        post '/devices/new', to: 'device#create'
+        get '/devices', to: 'device#index'
+        post '/device/edit', to: 'device#update'
+        post 'devices/delete', to: 'device#void_devices'
+
         
       end
     end
