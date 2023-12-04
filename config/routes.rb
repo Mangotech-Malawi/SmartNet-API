@@ -31,6 +31,8 @@ Rails.application.routes.draw do
         post '/device/edit', to: 'device#update'
         post 'devices/delete', to: 'device#void_devices'
 
+        get '/events', to: 'event#index'
+
         
       end
     end
