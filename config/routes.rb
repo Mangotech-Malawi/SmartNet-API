@@ -34,7 +34,7 @@ Rails.application.routes.draw do
         get '/custodians', to: 'custodian#index'
         post '/custodian/edit', to: 'custodian#update'
 
-        post '/devices/new', to: 'device#create'
+        post '/device/new', to: 'device#create'
         get '/devices', to: 'device#index'
         post '/device/edit', to: 'device#update'
         post 'devices/delete', to: 'device#void_devices'
