@@ -1,6 +1,7 @@
 module NetworkEventsService
   def self.fetch_network_events
     NetworkEvent.joins(:device, :event).select(
+      'network_events.id as network_event_id',
       'network_events.created_at',
       'network_events.updated_at',
       'network_events.source_ip',
@@ -20,7 +21,8 @@ module NetworkEventsService
         port: network_event.port,
         device_name: network_event.device_name,
         event_name: network_event.event_name,
-        severity: network_event.severity
+        severity: network_event.severity,
+        network_event_id: network_event.network_event_id
       }
     end
   end
