@@ -44,6 +44,9 @@ Rails.application.routes.draw do
 
         get  '/intrusions', to: 'intrusion#index'
         post '/intrusions/new', to: 'intrusion#create'
+
+        get  '/responses', to: 'response#index'
+        post '/response/new', to: 'response#create'
         
       end
     end
