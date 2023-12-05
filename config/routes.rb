@@ -41,6 +41,9 @@ Rails.application.routes.draw do
 
         get '/events', to: 'event#index'
         get '/network_events', to: 'network_event#index'
+
+        get  '/intrusions', to: 'intrusion#index'
+        post '/intrusions/new', to: 'intrusion#create'
         
       end
     end
